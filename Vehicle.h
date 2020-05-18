@@ -5,6 +5,7 @@
 #ifndef OBJEKTORIENTIERUNG_1_VEHICLE_H
 #define OBJEKTORIENTIERUNG_1_VEHICLE_H
 #include <string>
+#include <vector>
 #include "Struct.h"
 #include "Person.h"
 
@@ -34,7 +35,7 @@ private:
     unsigned int _horsepower;
     unsigned int _chairs;
     unsigned int _seat_number;
-    string *_seats;
+    vector<Person> _seats;
 };
 
 

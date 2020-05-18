@@ -13,10 +13,10 @@ enum struct Nationalities{de, en, it, es};
 
 class Person {
 public:
-
+    Person();
     Person(std::string name, Nationalities nationality);
-
-    void greet(string other);
+    ~Person();
+    void greet(Person other);
     const Nationalities &getNationality() const;
     const std::string &getName() const;
 
