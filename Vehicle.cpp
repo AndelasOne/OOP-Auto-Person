@@ -43,7 +43,6 @@ unsigned int Vehicle::getSeat_Number() const {
 }
 
 void Vehicle::exit(int seat_number) {
-    seat_number = seat_number -1;
     if(seat_number > _seat_number){
         cout << "The car has only " << _seat_number << " seats" << endl;
    }
@@ -58,13 +57,11 @@ void Vehicle::exit(int seat_number) {
             if(i != seat_number-1)
                 buffer.push_back(_seats[i]);
             else
-                cout << buffer[i].getName() << " left the car." << endl << "Cleaning program gets started." << endl;
+                cout << _seats[i].getName() << " left the car." << endl << "Cleaning program gets started." << endl;
         }
         _seats.clear();
         for(unsigned int i = 0; i < buffer.size(); i++)
             _seats.push_back(buffer[i]);
-
-
     }
 
 }
